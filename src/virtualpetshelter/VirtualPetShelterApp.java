@@ -99,11 +99,12 @@ public class VirtualPetShelterApp {
 			case "6":
 				System.out.println("You have left the Queen Anne's Revenge Pet Shelter.");
 				System.exit(0);
+	
 			}
 
 			System.out.println("\nThis is the status of our pets:");
 
-			System.out.println("Name\t|Hunger\t|Thirst\t|Pillage\t");
+			System.out.println("Name\tHunger\tThirst\tPillage\t");
 			System.out.println("___________________________________");
 
 			for (VirtualPet current : shelter.pets()) {

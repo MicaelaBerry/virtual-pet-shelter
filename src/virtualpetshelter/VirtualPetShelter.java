@@ -4,17 +4,14 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class VirtualPetShelter {
 	Map<String, VirtualPet> shelterPets = new HashMap<String, VirtualPet>();
-
 
 	public Collection<VirtualPet> pets() {
 		return shelterPets.values();
 	}
 
-
-	// feed method
+	// feed method for pets
 	public void feedAllPets() {
 		for (VirtualPet p : shelterPets.values()) {
 			p.feedPet();
@@ -28,7 +25,7 @@ public class VirtualPetShelter {
 		}
 	}
 
-	// get pet method
+	// get pet specific method
 	public VirtualPet getPet(String name) {
 		return shelterPets.get(name);
 	}
@@ -37,7 +34,7 @@ public class VirtualPetShelter {
 	public void playOne(VirtualPet pet) {
 		pet.pillage();
 	}
-	
+
 	// adding pets method
 	public void addPet(VirtualPet pet) {
 		shelterPets.put(pet.name.toLowerCase(), pet);
@@ -47,11 +44,11 @@ public class VirtualPetShelter {
 	public void adoptPet(String removedPet) {
 		shelterPets.remove(removedPet);
 	}
-	
+
 	// Tick method
 	public void tickAllPets() {
 		for (VirtualPet p : shelterPets.values()) {
-		p.tick();
+			p.tick();
 		}
 	}
-	}
+}
